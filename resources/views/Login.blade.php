@@ -1,3 +1,3 @@
-@extends(Master)
-@section(content)
+@extends('Master')
+@section('content')
 <h1>Login Page</h1>
