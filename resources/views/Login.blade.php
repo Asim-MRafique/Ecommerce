@@ -1,8 +1,8 @@
 @extends('Master')
 @section('content')
 <div class="container">
-<div class="row-sm-4">
-<div class="col-sm-4">
+<div class="row">
+<div class="col-sm-4 col-sm-offset-4 ">
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -19,7 +19,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-<button class="btn btn-primary">Login</button>
 </div>
 </div>
 </div>

@@ -15,14 +15,17 @@
 
 <body>
     {{View::make('header')}}
+    <br>
     @yield('content')
+    <br>
+    <br>
     {{View::make('footer')}}
 
 </body>
-<script>
+<!-- <script>
     $('button').click(function() {
         alert("JQuery is workin properly.");
     });
-</script>
+</script> -->
 
 </html>
