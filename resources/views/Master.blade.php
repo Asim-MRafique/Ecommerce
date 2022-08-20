@@ -22,10 +22,11 @@
     {{View::make('footer')}}
 
 </body>
-<!-- <script>
-    $('button').click(function() {
-        alert("JQuery is workin properly.");
-    });
-</script> -->
+<style>
+    .custom-login{
+        height: 400px;
+        padding-top: 20px;
+    }
+</style>
 
 </html>
