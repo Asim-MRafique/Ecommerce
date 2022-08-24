@@ -28,6 +28,17 @@
         padding-top: 30px;
         padding-bottom: 10px;
     }
+    img.slider-image{
+        height: 250px !important;
+    }
+    .custom-product{
+        height: 400px;
+    }
+    .slider-text{
+        background-color: lightblue;
+    }
+
+    
 </style>
 
 </html>
