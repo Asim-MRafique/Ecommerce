@@ -37,8 +37,20 @@
     .slider-text{
         background-color: lightblue;
     }
-
-    
+.description-text{
+    left: 35%;
+}
+.image-list{
+height: 100px;
+}
+.trending-image{
+    float:left;
+    width: 20%;
+}
+trending-wrapper{
+    border-width: 1px;
+    border-color: black;
+}
 </style>
 
 </html>

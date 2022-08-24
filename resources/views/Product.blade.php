@@ -14,12 +14,26 @@
                 @foreach($products as $items)
                 <div class="item {{$items['id']==1?'active':''}}">
                     <img class="slider-image" src="{{$items['gallery']}}" alt="Chania">
-                    <div class="carousel-caption slider-text">
+                    <div class="carousel-caption slider-text description-text">
                         <h3>{{$items['name']}}</h3>
                         <p>{{$items['description']}}</p>
                     </div>
                 </div>
                 @endforeach
+            </div>
+
+            <div class="trending-wrapper" style="border-color: black; border:1px">
+                <h1>Trending Products</h1>
+                <div">
+                @foreach($products as $items)
+                <div class="trending-image">
+                    <img class="image-list" src="{{$items['gallery']}}">
+                    <div class="">
+                        <h3>{{$items['name']}}</h3>
+                    </div>
+                </div>
+                @endforeach
+            </div>
             </div>
 
             <!-- Left and right controls -->
