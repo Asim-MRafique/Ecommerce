@@ -22,3 +22,5 @@ use App\Http\Controllers\ProductController;
 Route::view('login',"Login");
 Route::post('login',[UserController::class,'Login']);
 Route::get('/',[ProductController::class,'index']);
+Route::get('detail/{id}',[ProductController::class,'Details']);
+

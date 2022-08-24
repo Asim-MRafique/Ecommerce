@@ -57,6 +57,10 @@ trending-wrapper{
     border-width: 1px;
     border-color: black;
 }
+.image-detail
+{
+    height: 200px;
+}
 </style>
 
 </html>
