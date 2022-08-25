@@ -23,13 +23,15 @@
 </ul>
 
 <!-- Search -->
-<form class="navbar-form navbar-right" role="search">
+<form action="/search" class="navbar-form navbar-left " role="search">
 <div class="form-group">
-<input type="text" class="form-control">
+<input type="text" name="query" class="form-control search-box">
 </div>
 <button type="submit" class="btn btn-default">Search</button>
 </form>
-
+<ul class="cart-all">
+    <li> <a class="nav navbar-form navbar-right  "> Cart(0)</a></li>
+</ul>
 </div>
 
 </div>

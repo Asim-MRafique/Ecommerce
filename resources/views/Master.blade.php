@@ -61,6 +61,14 @@ trending-wrapper{
 {
     height: 200px;
 }
+.search-box
+{
+    width: 450px !important;
+}
+/* .cart-all
+{
+    width: 100px !important;
+} */
 </style>
 
 </html>
