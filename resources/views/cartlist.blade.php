@@ -21,7 +21,7 @@
                     <p>{{$items->description}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <button class="btn btn-warning">Remove From Cart</button>
+                   <a href="/removecart/{{$items->cart_id}}"  class="btn btn-warning">Remove From Cart</a>
                 </div>
                 </div>
                 @endforeach

@@ -29,28 +29,32 @@ class ProductController extends Controller
     }
     function AddToCart(Request $req)
     {
-        if ($req->session()->has('user')) 
-        {
+        if ($req->session()->has('user')) {
             $cart = new cart;
-            $cart->user_id=$req->session()->get('user')['id'];
-            $cart->product_id=$req->product_id;
+            $cart->user_id = $req->session()->get('user')['id'];
+            $cart->product_id = $req->product_id;
             $cart->save();
             return redirect('/');
-        }
-        else
-        {
+        } else {
             return redirect('/login');
         }
     }
-   function CartList()
-   {
-    $userid= Session::get('user')['id'];
-    $data= DB::table('cart')
-    ->join('products','cart.product_id','products.id')
-    ->select('products.*')
-    ->where('cart.user_id',$userid)
-    ->get();
-    
-    return view('cartlist',["products"=>$data]);
-   }
+    function CartList()
+    {
+        $userid = Session::get('user')['id'];
+        $data = DB::table('cart')
+            ->join('products', 'cart.product_id', 'products.id')
+            ->select('products.*', 'cart.id as cart_id')
+            ->where('cart.user_id', $userid)
+            ->get();
+
+        return view('cartlist', ["products" => $data]);
+    }
+
+    function removeCart($id)
+    {
+       
+        cart::destroy($id);
+        return redirect('/cartlist');
+    }
 }
