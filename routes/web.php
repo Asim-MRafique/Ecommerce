@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+
 
 
 /*
@@ -16,8 +18,9 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('logout', function () {
+//     Session::forget('user');
+//     return redirect('/login');
 // });
 Route::view('login',"Login");
 Route::post('login',[UserController::class,'Login']);
@@ -25,5 +28,8 @@ Route::get('/',[ProductController::class,'index']);
 Route::get('detail/{id}',[ProductController::class,'Details']);
 Route::get('search',[ProductController::class,'Search']);
 Route::post('Add_To_Cart',[ProductController::class,'AddToCart']);
+Route::get('cartlist',[ProductController::class,'CartList']);
+
+
 
 

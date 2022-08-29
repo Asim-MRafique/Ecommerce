@@ -65,10 +65,10 @@ trending-wrapper{
 {
     width: 450px !important;
 }
-/* .cart-all
+.cart-list-devider
 {
-    width: 100px !important;
-} */
+    border-bottom: ipx solid#ccc;
+}
 </style>
 
 </html>
