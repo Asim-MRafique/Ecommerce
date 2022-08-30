@@ -18,8 +18,8 @@
             <!-- Links -->
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Orders</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="/myorder">Orders</a></li>
+                <!-- <li><a href="#">Services</a></li> -->
             </ul>
 
             <!-- Search -->
