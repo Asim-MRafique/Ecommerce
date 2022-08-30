@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\product;
 use App\Models\cart;
+use App\Models\order;
+
 use Illuminate\Support\Facades\Session;
 
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Input\Input;
 
 class ProductController extends Controller
 {
@@ -53,7 +56,7 @@ class ProductController extends Controller
 
     function removeCart($id)
     {
-       
+
         cart::destroy($id);
         return redirect('/cartlist');
     }
@@ -67,5 +70,23 @@ class ProductController extends Controller
             ->sum('products.price');
 
         return view('ordernow', ["total" => $total]);
+    }
+    function placeorder(Request $req)
+    {
+        $userid = Session::get('user')['id'];
+        $allCart = cart::where('user_id', $userid)->get();
+        foreach ($allCart as $cart) {
+            $order=new order;
+            $order->product_id=$cart['product_id'];
+            $order->user_id=$cart['user_id'];
+            $order->address=$req->address;
+            $order->status="pending";
+            $order->payment_method=$req->payment;
+            $order->payment_status="pending";
+            $order->save();
+        }
+         cart::where('user_id', $userid)->delete();
+         return redirect('/');
+
     }
 }

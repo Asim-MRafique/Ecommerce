@@ -35,16 +35,17 @@
             </tbody>
         </table>
         <br>
-        <form action="">
+        <form action="placeorder" method="POST">
+            @csrf
             <div class="form-group">
-                <textarea class="form-control"></textarea>
+                <textarea class="form-control" placeholder="Enter Your Address" name="address"></textarea>
             </div>
             <div class="form-group">
 
                 <label for="lname">Payment Method</label>
-                <p><input type="radio" name="payment"> <span>Online Payment</span></p>
-                <p><input type="radio" name="payment"> <span>EMI</span></p>
-                <p><input type="radio" name="payment"> <span>Payment On Delivery</span></p>
+                <p><input type="radio" name="payment" value="cash"> <span>Online Payment</span></p>
+                <p><input type="radio" name="payment" value="cash"> <span>EMI</span></p>
+                <p><input type="radio" name="payment" value="cash"> <span>Payment On Delivery</span></p>
 
             </div>
 
