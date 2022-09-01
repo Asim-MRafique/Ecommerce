@@ -18,10 +18,10 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-// Route::get('logout', function () {
-//     Session::forget('user');
-//     return redirect('/login');
-// });
+Route::get('logout', function () {
+    Session::forget('user');
+    return redirect('/login');
+});
 Route::view('login',"Login");
 Route::post('login',[UserController::class,'Login']);
 Route::get('/',[ProductController::class,'index']);
